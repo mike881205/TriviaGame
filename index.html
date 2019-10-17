@@ -12,7 +12,7 @@
 <body>
 
 
-    <section class="intro">
+    <section id="intro">
         <header>
         <h1> TMNT Trivia!</h1>
         </header>
@@ -22,29 +22,26 @@
         <button id="start">Cowabunga!</button>
     </section>
 
-    <section class="quiz">
+    <section id="quiz">
 
-        <div class="question">
+        <div>
             <header>
-                <h1 class="countdown"></h1>
+                <h1 id="countdown"></h1>
             </header>
             <div>
-                <h3>Question 1</h3>
+                <h3 id="question"></h3>
                 <hr>
-                <p>
-                    Question?
-                </p>
-                <form >
-                    <input type="radio" id="choice" value="A"> A
-                    <input type="radio" id="choice" value="B"> B
-                    <input type="radio" id="choice" value="C"> C
-                    <input type="radio" id="choice" value="D"> D
+                <form id="choices">
+                    <input type="radio" class="choice" id="A" value="A"> A
+                    <input type="radio" class="choice" id="B" value="B"> B
+                    <input type="radio" class="choice" id="C" value="C"> C
+                    <input type="radio" class="choice" id="D" value="D"> D
                 </form>
             </div>
             <button id="submit">Submit</button>
         </div>
 
-        <div class="showAnswer">
+        <div id="showAnswer">
             <header>
                 <h1 id="answerHeader"></h1>
             </header>
