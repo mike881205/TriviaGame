@@ -11,36 +11,57 @@
 </head>
 <body>
 
-    <div id="star">Start Quiz</div>
-    <div id="quiz" style = "display:none;">
-    
-        <div id="qImage">
-            <img src="img.png" alt="qImage">
+
+    <section id="intro">
+        <header>
+        <h1> TMNT Trivia!</h1>
+        </header>
+        <p>
+            Welcome to Teenage Mutant Ninja Turtle trivia! Put your TMNT knowledge to the test and answer 10 questions about the hlafshell heroes. You have 30 seconds to answer each question. Click the button to begin!
+        </p>
+        <button id="start">Cowabunga!</button>
+    </section>
+
+    <section id="showQuiz">
+
+        <div id="showQuestion">
+            <header>
+                <h1 id="timer"></h1>
+            </header>
+            <div>
+                <h3 id="question"></h3>
+                <hr>
+                <form id="choices">
+                    <input type="radio" class="choice" id="A" value="A"> A
+                    <input type="radio" class="choice" id="B" value="B"> B
+                    <input type="radio" class="choice" id="C" value="C"> C
+                </form>
+            </div>
+            <button id="submit">Submit</button>
         </div>
 
-        <div id="question">
-            <p>Question</p>
+        <div id="showAnswer">
+            <header>
+                <h1 id="answerHeader"></h1>
+            </header>
+            <div id="qImg"></div>
+            <p id="answer">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ex quae dolores ipsam rerum doloremque nisi aspernatur, facere doloribus illum atque harum saepe nostrum quidem eveniet! Unde ratione culpa tenetur.
+            </p>
+            <button id="next">Next Question</button>
         </div>
 
-        <div id="timer">
-            <div id="counter">6</div>
-            <div id="btimeGauge"></div>
-            <div id="timeGauge"></div>
-        </div>
+    </section>
 
-        <div id="choices">
-            <div class="choice" id="A">A</div>
-            <div class="choice" id="B">B</div>
-            <div class="choice" id="C">C</div>
-        </div>
-    
-    </div>
+    <section id="showResults">
+        <header>
+            <h1>Final Score</h1>
+            <div id="scoreDiv"></div>
+        </header>
+    </section>
 
-    <div id="scoreContainer" style = "display:none;">
-        <img src="img.png">
-        <p>50%</p>
-    </div>
-
-<script src="assets/javascript/app2.js"></script>
+<script src="assets/javascript/variables.js"></script>
+<script src="assets/javascript/functions.js"></script> 
+<script src="assets/javascript/gamelogic.js"></script> 
 </body>
 </html>

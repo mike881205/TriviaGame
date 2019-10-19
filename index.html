@@ -22,11 +22,11 @@
         <button id="start">Cowabunga!</button>
     </section>
 
-    <section id="quiz">
+    <section id="showQuiz">
 
-        <div>
+        <div id="showQuestion">
             <header>
-                <h1 id="countdown"></h1>
+                <h1 id="timer"></h1>
             </header>
             <div>
                 <h3 id="question"></h3>
@@ -35,7 +35,6 @@
                     <input type="radio" class="choice" id="A" value="A"> A
                     <input type="radio" class="choice" id="B" value="B"> B
                     <input type="radio" class="choice" id="C" value="C"> C
-                    <input type="radio" class="choice" id="D" value="D"> D
                 </form>
             </div>
             <button id="submit">Submit</button>
@@ -45,12 +44,20 @@
             <header>
                 <h1 id="answerHeader"></h1>
             </header>
+            <div id="qImg"></div>
             <p id="answer">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ex quae dolores ipsam rerum doloremque nisi aspernatur, facere doloribus illum atque harum saepe nostrum quidem eveniet! Unde ratione culpa tenetur.
             </p>
-            <button id="nextQuestion">Next Question</button>
+            <button id="next">Next Question</button>
         </div>
 
+    </section>
+
+    <section id="showResults">
+        <header>
+            <h1>Final Score</h1>
+            <div id="scoreDiv"></div>
+        </header>
     </section>
 
     <!-- <div id="question2">
