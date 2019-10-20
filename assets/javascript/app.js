@@ -10,7 +10,7 @@ let questions = [
       choiceB : "Lewis & Clark",
       choiceC : "Stan Lee",
       correct : "A",
-      answer : "Kevin Eastman & Peter Laird created the TMNT"
+      answer : "Kevin Eastman & Peter Laird"
   },{
       question : "In the beginning, all of the turtles wore the same color bandana. What color were they?",
       imgSrc : "https://images.penguinrandomhouse.com/cover/9781684053889",
@@ -18,7 +18,7 @@ let questions = [
       choiceB : "Red",
       choiceC : "Green",
       correct : "B",
-      answer : "The original color of the turtles' bandanas was red"
+      answer : "Red"
   },{
       question : "What is the real name of the Turtles' arch nemesis 'The Shredder'?",
       imgSrc : "https://www.syfy.com/sites/syfy/files/styles/1170xauto/public/shredder_in_hell_slice_1.png",
@@ -26,7 +26,7 @@ let questions = [
       choiceB : "Lex Luther",
       choiceC : "Oroku Saki",
       correct : "C",
-      answer : "The Shredder's real name is Oroku Saki"
+      answer : "Oroku Saki"
   },{
       question : "What is the name of the company who made the ooze that mutated the turtles?",
       imgSrc : "https://live.staticflickr.com/7405/11259387984_902fda5466_b.jpg",
@@ -34,7 +34,7 @@ let questions = [
       choiceB : "Haliburton",
       choiceC : "Enron",
       correct : "A",
-      answer : "TGRI is the company that created the ooze"
+      answer : "TGRI"
   },{
       question : "The evil henchmen Bebop and Rocksteady are what kind of animals?",
       imgSrc : "https://vignette.wikia.nocookie.net/monstermovies/images/c/c1/Bebop_%26_Rocksteady.jpg/revision/latest?cb=20170705125706",
@@ -42,7 +42,7 @@ let questions = [
       choiceB : "Warthog & Rhinoceros",
       choiceC : "Armadillo & Bear",
       correct : "B",
-      answer : "Bebop and Rocksteady are a warthog & rhinoceros"
+      answer : "Warthog & Rhinoceros"
   },{
       question : "What is April O'Neil's profession?",
       imgSrc : "https://am23.akamaized.net/tms/cnt/uploads/2018/07/teenage-mutant-ninja-turtles-1200x675.jpg",
@@ -50,7 +50,7 @@ let questions = [
       choiceB : "Radio Jockey",
       choiceC : "News Reporter",
       correct : "C",
-      answer : "April O'neil is a news reporter"
+      answer : "News Reporter"
   },{
       question : "Which turtle is known as the 'Party Dude'?",
       imgSrc : "https://i.pinimg.com/originals/4d/2a/a8/4d2aa8438fd7e3409ec0a1fdddb2398f.jpg",
@@ -58,7 +58,7 @@ let questions = [
       choiceB : "Raphael",
       choiceC : "Leonardo",
       correct : "A",
-      answer : "Michelangelo is a party dude!"
+      answer : "Michelangelo"
   },{
       question : "What famous entertainer performed the song 'Ninja Rap' in the second live action movie 'Secret of the Ooze'?",
       imgSrc : "http://iwatchstuff.com/2014/08/05/vanilla-ice-turtles.jpg",
@@ -66,7 +66,7 @@ let questions = [
       choiceB : "Vanilla Ice",
       choiceC : "Jay-Z",
       correct : "B",
-      answer : "Vanilla Ice performed the song 'Ninja Rap'"
+      answer : "Vanilla Ice"
   },{
       question : "What year was the very first issue of the Teenage Mutant Ninja Turtles comic book published?",
       imgSrc : "https://www.idwpublishing.com/wp-content/uploads/2016/12/TMNT-AE-cvr.jpg",
@@ -74,7 +74,7 @@ let questions = [
       choiceB : "1991",
       choiceC : "1984",
       correct : "C",
-      answer : "The first TMNT comic was published in 1984"
+      answer : "1984"
   },{
       question : "How many years did the cartoon series run for?",
       imgSrc : "https://pm1.narvii.com/6100/2dbc921e1e869b6d98abe5361620abec40b3a2b8_hq.jpg",
@@ -82,7 +82,7 @@ let questions = [
       choiceB : "15",
       choiceC : "5",
       correct : "A",
-      answer : "The cartoon series ran for 10 years"
+      answer : "10 years"
   }
 ]
 
@@ -120,6 +120,26 @@ let score = 0;
 let checked = false;
 let userChoice = $("input");
 let userAnswer;
+
+//===============================================================
+// Shuffle Questions Function
+//===============================================================
+
+function shuffle() {
+  var currentIndex = questions.length, temporaryValue, randomIndex;
+
+  while (0 !== currentIndex) {
+
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    temporaryValue = questions[currentIndex];
+    questions[currentIndex] = questions[randomIndex];
+    questions[randomIndex] = temporaryValue;
+  }
+
+  return questions;
+}
 
 //===============================================================
 // Timer function
@@ -201,7 +221,7 @@ function renderImg(){
   let i = questions[runningQuestion];
   
   // Show the image
-  qImg.attr('src', i.imgSrc);
+  qImg.attr('src', i.imgSrc).height("400px").width("500px")
   qImg.appendTo("#imgDiv");
 }
 
@@ -210,18 +230,7 @@ function renderImg(){
 //===============================================================
 
 function scoreRender(){ 
-  
-  // 
-  const scorePerCent = Math.round(100 * score/questions.length);
-
-  // let img = (scorePerCent >= 80) ? "img/5.png" :
-  // (scorePerCent >= 60) ? "img/4.png" :
-  // (scorePerCent >= 40) ? "img/3.png" :
-  // (scorePerCent >= 20) ? "img/2.png" :
-  // "img/1.png";
-
-  // scoreDiv.html("<img src="+ img +">");
-  scoreDiv.text("You got " + score + "/10 correct!");
+  scoreDiv.html("You got " + score + "/10 correct!");
 }
 
 //===============================================================
@@ -252,6 +261,9 @@ pageLoad();
 
 // When the user clicks "Start"
 start.on("click", function() {
+
+  // Shuffle Questions
+  shuffle();
   
   // Hide the intro section
   intro.hide();
@@ -272,7 +284,6 @@ start.on("click", function() {
   renderQuestion();
   renderAnswer();
   renderImg();
-  console.log(questions[runningQuestion]);
 })
 
 // When the user clicks the "submit" button
@@ -376,7 +387,7 @@ next.on("click", function() {
       {
        var radioButton = userChoice[i];
        radioButton.checked = false;
-       userAnswer = userChoice[i].value
+       checked = false
       }        
 
       // Render the next question
@@ -400,7 +411,6 @@ next.on("click", function() {
       //Show and start the timer
       timer.show();
       startTimer();
-      console.log(questions[runningQuestion]);
 
   // If the current index is the last index
   }else{
@@ -410,3 +420,4 @@ next.on("click", function() {
       scoreRender();
   }
 })
+

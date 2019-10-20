@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Trivia Game</title>
 </head>
 <body>
 
 
     <section id="intro">
         <header>
-        <h1> TMNT Trivia!</h1>
+        <h1> Teenage Mutant Ninja Turtle Trivia!</h1>
         </header>
         <p>
-            Welcome to Teenage Mutant Ninja Turtle trivia! Put your TMNT knowledge to the test and answer 10 questions about the hlafshell heroes. You have 30 seconds to answer each question. Click the button to begin!
+            Put your TMNT knowledge to the test and answer 10 questions about the halfshell heroes. <br> You have 20 seconds to answer each question. <br> Click the button to get started!
         </p>
         <button id="start">Cowabunga!</button>
     </section>
@@ -32,9 +33,12 @@
                 <h3 id="question"></h3>
                 <hr>
                 <form id="choices">
-                    <input type="radio" class="choice" id="A" value="A"> A
-                    <input type="radio" class="choice" id="B" value="B"> B
-                    <input type="radio" class="choice" id="C" value="C"> C
+                    <input type="radio" class="choice" value="A">
+                    <label id="A">A</label>
+                    <input type="radio" class="choice" value="B">
+                    <label id="B">B</label>                        
+                    <input type="radio" class="choice" value="C">
+                    <label id="C">C</label>
                 </form>
             </div>
             <button id="submit">Submit</button>
@@ -44,10 +48,8 @@
             <header>
                 <h1 id="answerHeader"></h1>
             </header>
-            <div id="qImg"></div>
-            <p id="answer">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ex quae dolores ipsam rerum doloremque nisi aspernatur, facere doloribus illum atque harum saepe nostrum quidem eveniet! Unde ratione culpa tenetur.
-            </p>
+            <div id="imgDiv"></div>
+            <p id="answer"></p>
             <button id="next">Next Question</button>
         </div>
 
@@ -56,89 +58,12 @@
     <section id="showResults">
         <header>
             <h1>Final Score</h1>
+            <br>
             <div id="scoreDiv"></div>
+            <br>
+            <p>Refresh to Play Again!</p>
         </header>
     </section>
-
-    <!-- <div id="question2">
-        <header>
-            <h1 id="countdown"></h1>
-        </header>
-        <div>
-            <h3>Question 2</h3>
-            <hr>
-            <p>
-                Question?
-            </p>
-            <form >
-                <input type="radio" id="choice" value="A"> A
-                <input type="radio" id="choice" value="B"> B
-                <input type="radio" id="choice" value="C"> C
-                <input type="radio" id="choice" value="D"> D
-            </form>
-        </div>
-        <button id="submit">Submit</button>
-    </div>
-
-    <div id="question3">
-        <header>
-            <h1 id="countdown"></h1>
-        </header>
-        <div>
-            <h3>Question 3</h3>
-            <hr>
-            <p>
-                Question?
-            </p>
-            <form >
-                <input type="radio" id="choice" value="A"> A
-                <input type="radio" id="choice" value="B"> B
-                <input type="radio" id="choice" value="C"> C
-                <input type="radio" id="choice" value="D"> D
-            </form>
-        </div>
-        <button id="submit">Submit</button>
-    </div>
-
-    <div id="question4">
-        <header>
-            <h1 id="countdown"></h1>
-        </header>
-        <div>
-            <h3>Question 4</h3>
-            <hr>
-            <p>
-                Question?
-            </p>
-            <form >
-                <input type="radio" id="choice" value="A"> A
-                <input type="radio" id="choice" value="B"> B
-                <input type="radio" id="choice" value="C"> C
-                <input type="radio" id="choice" value="D"> D
-            </form>
-        </div>
-        <button id="submit">Submit</button>
-    </div>
-
-    <div id="question5">
-        <header>
-            <h1 id="countdown"></h1>
-        </header>
-        <div>
-            <h3>Question 5</h3>
-            <hr>
-            <p>
-                Question?
-            </p>
-            <form >
-                <input type="radio" id="choice" value="A"> A
-                <input type="radio" id="choice" value="B"> B
-                <input type="radio" id="choice" value="C"> C
-                <input type="radio" id="choice" value="D"> D
-            </form>
-        </div>
-        <button id="submit">Submit</button>
-    </div> -->
 
 <script src="assets/javascript/app.js"></script> 
 </body>

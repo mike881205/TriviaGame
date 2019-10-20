@@ -1,4 +1,11 @@
 
+body {
+    background: black;
+    color: greenyellow;
+    font-family: 'Bangers', cursive;
+    line-height: 200%;
+}
+
 #intro header{
     font-size: 50px;
     font-weight: bold;
@@ -12,6 +19,7 @@
     width: 80%;
     margin: 3%;
     text-align: center;
+    color: red;
 }
 
 #intro button {
@@ -20,6 +28,11 @@
     margin: 3%;
     text-align: center;
     margin-left: 33%;
+    font-family: 'Bangers', cursive;
+}
+
+#timer {
+    color: red;
 }
 
 #showQuestion header {
@@ -38,10 +51,11 @@
 }
 
 #showQuestion form {
-    font-size: 18px;
+    font-size: 23px;
     width: 80%;
     margin: 3%;
     text-align: center;
+    color: red;
 }
 
 #showQuestion button {
@@ -50,6 +64,7 @@
     margin: 3%;
     text-align: center;
     margin-left: 33%;
+    font-family: 'Bangers', cursive;
 }
 
 #showAnswer header{
@@ -61,14 +76,16 @@
 }
 
 #showAnswer p {
-    font-size: 20px;
+    font-size: 30px;
     width: 80%;
     margin: 3%;
     text-align: center;
+    color: red;
 }
 
 #imgDiv {
     margin: 3%;
+    margin-left: 27%;
 }
 
 #showAnswer button {
@@ -77,4 +94,17 @@
     margin: 3%;
     text-align: center;
     margin-left: 33%;
+    font-family: 'Bangers', cursive;
+}
+
+#showResults header {
+    font-size: 40px;
+    font-weight: bold;
+    width: 80%;
+    margin: 3%;
+    text-align: center;
+}
+
+#scoreDiv {
+    color: red;
 }
