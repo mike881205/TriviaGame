@@ -45,6 +45,7 @@ start.on("click", function() {
     // Render Questions and Answers
     renderQuestion();
     renderAnswer();
+    renderImg();
     console.log(questions[runningQuestion]);
   })
 
@@ -95,6 +96,9 @@ sumbit.on("click", function() {
         // Show the answer
         answer.show();
 
+        // Show the answer Image
+        qImg.show();
+
         // Increase the score
         score++;
     
@@ -121,6 +125,9 @@ sumbit.on("click", function() {
 
         // Show the answer
         answer.show();
+
+        // Show the answer Image
+        qImg.show();
     }
 
     if (runningQuestion >= lastQuestion) {
@@ -151,6 +158,9 @@ next.on("click", function() {
 
         // Render the next answer
         renderAnswer();
+
+        // Render the next image
+        renderImg();
 
         // Hide the "next" button
         next.hide();

@@ -9,7 +9,8 @@ function startTimer() {
     // Reset clock
     clearInterval(countdownTimer);
     countdownTimer = setInterval(decrement, 1000);
-    seconds = 15;
+    seconds = 20;
+    timer.html(seconds);
     }
 
 // Stop Clock
@@ -68,6 +69,17 @@ function renderAnswer(){
     
     // Show the answer
     answer.text(a.answer);
+}
+
+// Render Image
+function renderImg(){
+
+    // Create a variable to hold the index
+    let i = questions[runningQuestion];
+    
+    // Show the image
+    qImg.attr('src', i.imgSrc).height("400px").width("500px")
+    qImg.appendTo("#imgDiv");
 }
 
 //===============================================================

@@ -17,7 +17,7 @@
         <h1> TMNT Trivia!</h1>
         </header>
         <p>
-            Welcome to Teenage Mutant Ninja Turtle trivia! Put your TMNT knowledge to the test and answer 10 questions about the hlafshell heroes. You have 30 seconds to answer each question. Click the button to begin!
+            Welcome to Teenage Mutant Ninja Turtle trivia! Put your TMNT knowledge to the test and answer 10 questions about the halfshell heroes. You have 20 seconds to answer each question. Click the button to get started!
         </p>
         <button id="start">Cowabunga!</button>
     </section>
@@ -32,9 +32,12 @@
                 <h3 id="question"></h3>
                 <hr>
                 <form id="choices">
-                    <input type="radio" class="choice" id="A" value="A"> A
-                    <input type="radio" class="choice" id="B" value="B"> B
-                    <input type="radio" class="choice" id="C" value="C"> C
+                    <input type="radio" class="choice" value="A">
+                    <label id="A">A</label>
+                    <input type="radio" class="choice" value="B">
+                    <label id="B">B</label>                        
+                    <input type="radio" class="choice" value="C">
+                    <label id="C">C</label>
                 </form>
             </div>
             <button id="submit">Submit</button>
@@ -44,10 +47,8 @@
             <header>
                 <h1 id="answerHeader"></h1>
             </header>
-            <div id="qImg"></div>
-            <p id="answer">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ex quae dolores ipsam rerum doloremque nisi aspernatur, facere doloribus illum atque harum saepe nostrum quidem eveniet! Unde ratione culpa tenetur.
-            </p>
+            <div id="imgDiv"></div>
+            <p id="answer"></p>
             <button id="next">Next Question</button>
         </div>
 

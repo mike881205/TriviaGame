@@ -1,0 +1,80 @@
+
+#intro header{
+    font-size: 50px;
+    font-weight: bold;
+    width: 80%;
+    margin: 3%;
+    text-align: center;
+}
+
+#intro p {
+    font-size: 20px;
+    width: 80%;
+    margin: 3%;
+    text-align: center;
+}
+
+#intro button {
+    font-size: 20px;
+    width: 20%;
+    margin: 3%;
+    text-align: center;
+    margin-left: 33%;
+}
+
+#showQuestion header {
+    font-size: 40px;
+    font-weight: bold;
+    width: 80%;
+    margin: 3%;
+    text-align: center;
+}
+
+#showQuestion h3 {
+    font-size: 30px;
+    width: 80%;
+    margin: 3%;
+    text-align: center;
+}
+
+#showQuestion form {
+    font-size: 18px;
+    width: 80%;
+    margin: 3%;
+    text-align: center;
+}
+
+#showQuestion button {
+    font-size: 20px;
+    width: 20%;
+    margin: 3%;
+    text-align: center;
+    margin-left: 33%;
+}
+
+#showAnswer header{
+    font-size: 50px;
+    font-weight: bold;
+    width: 80%;
+    margin: 3%;
+    text-align: center;
+}
+
+#showAnswer p {
+    font-size: 20px;
+    width: 80%;
+    margin: 3%;
+    text-align: center;
+}
+
+#imgDiv {
+    margin: 3%;
+}
+
+#showAnswer button {
+    font-size: 20px;
+    width: 20%;
+    margin: 3%;
+    text-align: center;
+    margin-left: 33%;
+}
