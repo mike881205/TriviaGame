@@ -302,6 +302,8 @@ sumbit.on("click", function() {
        userAnswer = userChoice[i].value;
      }
   }
+
+  
   
   // If no answer is selected
   if(!checked) {
